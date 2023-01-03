@@ -10,7 +10,7 @@ await fetch(API_URL_ALL_COUNTRIES)
     const modifiedCountry = {
       name: country.name.common,
       capital: country.capital,
-      population: country.population,
+      population: country.population.toLocaleString(),
       region: country.region,
       flagLink: country.flags.png,
       nativeName: country.name.nativeName,
