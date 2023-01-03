@@ -1,12 +1,10 @@
-import countries from "./fetchApiData.js";
-
-const countriesContainer = document.getElementById("countries");
+const countriesContainer = document.getElementById('countries');
 
 const renderCountries = (countries) => {
-  countriesContainer.innerHTML = "";
+  countriesContainer.innerHTML = '';
   countries.forEach((country) => {
-    const countryEl = document.createElement("div");
-    countryEl.classList.add("country-container");
+    const countryEl = document.createElement('div');
+    countryEl.classList.add('country-container');
     countryEl.innerHTML = `
       <div>
         <img src="${country.flagLink}" alt="${country.name}" loading="lazy" />
@@ -18,9 +16,8 @@ const renderCountries = (countries) => {
         <p><strong>Capital:</strong> ${country.capital}</p>
       </div>
     `;
-    console.log(countryEl);
     countriesContainer.appendChild(countryEl);
   });
 }
 
-renderCountries(countries);
+export default renderCountries;

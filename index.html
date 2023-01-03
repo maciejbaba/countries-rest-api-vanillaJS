@@ -9,8 +9,10 @@
   <title>Countries</title>
   <link rel="stylesheet" href="./stylesHTML.css">
   <link rel="stylesheet" href="./stylesJS.css">
-  <script src="./renderCountries.js" type="module" async></script>
   <script src="./fetchApiData.js" type="module" async></script>
+  <script src="./filters.js" type="module" async></script>
+  <script src="./app.js" type="module" async></script>
+  <script src="./renderCountries.js" type="module" async></script>
 </head>
 <body>
   <main>
@@ -28,6 +30,7 @@
       <input id="search" type="text" placeholder="Search for a country..." />
       <select name="region" id="region">
         <option value="" selected hidden>Search by Region</option>
+        <option value="All">All</option>
         <option value="Africa">Africa</option>
         <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>

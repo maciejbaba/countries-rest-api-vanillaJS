@@ -18,7 +18,7 @@ await fetch(API_URL_ALL_COUNTRIES)
       topLevelDomain: country.tld,
       currencies: country.currencies,
       languages: country.languages,
-      borders: country.borders || "No borders",
+      borders: country.borders || 'No borders',
     }
 
     modifiedCountries.push(modifiedCountry);
