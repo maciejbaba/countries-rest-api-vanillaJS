@@ -3,7 +3,7 @@ const API_URL_ALL_COUNTRIES = 'https://restcountries.com/v3.1/all';
 let modifiedCountries = [];
 
 await fetch(API_URL_ALL_COUNTRIES)
-.then(res => res.json())
+.then(async res => await res.json())
 .then(countries => {
   countries.forEach(country => {
 

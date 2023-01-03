@@ -1,18 +1,15 @@
 import countries from "./fetchApiData.js";
 
-const searchInput = document.getElementById("search");
-const regionSelect = document.getElementById("region");
-const darkModeBtn = document.getElementById("dark-mode");
 const countriesContainer = document.getElementById("countries");
 
 const renderCountries = (countries) => {
   countriesContainer.innerHTML = "";
   countries.forEach((country) => {
     const countryEl = document.createElement("div");
-    countryEl.classList.add("country");
+    countryEl.classList.add("country-container");
     countryEl.innerHTML = `
       <div>
-        <img src="${country.flag}" alt="${country.name}" />
+        <img src="${country.flagLink}" alt="${country.name}" loading="lazy" />
       </div>
       <div class="country-info">
         <h3 class="country-name">${country.name}</h3>
