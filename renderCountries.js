@@ -4,6 +4,12 @@ const renderCountries = (countries) => {
   countriesContainer.innerHTML = '';
   countries.forEach((country) => {
     const countryEl = document.createElement('div');
+    
+    // this if statement is needed for country container dark mode styles to apply after re-render during region change 
+    if (document.body.classList.contains('dark-mode')) {
+      countryEl.classList.add('dark-mode')
+    }
+
     countryEl.classList.add('country-container');
     countryEl.innerHTML = `
       <div>
@@ -20,4 +26,4 @@ const renderCountries = (countries) => {
   });
 }
 
-export default renderCountries;
+export default renderCountries
