@@ -30,7 +30,7 @@ header button {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.25rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
 }
@@ -48,7 +48,7 @@ nav {
 nav input {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   width: 16rem;
   cursor: pointer;
@@ -58,7 +58,7 @@ nav input {
 nav select {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   max-width: 15rem;
   cursor: pointer;
