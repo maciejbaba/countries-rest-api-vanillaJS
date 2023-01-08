@@ -30,6 +30,10 @@ await fetch(API_URL_ALL_COUNTRIES)
 export const fetchCountryByName = async (countryName) => {
   const countryAsArr = await fetch(`${API_URL_COUNTRY_BY_NAME}${countryName}`)
   .then(async res => await res.json())
+  .then(country => {
+      // todo return only necessary properties of country object
+      return country
+  })
   .catch(err => console.log(err));
 
   const country = countryAsArr[0]
