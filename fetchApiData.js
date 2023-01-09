@@ -14,12 +14,6 @@ await fetch(API_URL_ALL_COUNTRIES)
       population: country.population.toLocaleString(),
       region: country.region,
       flagLink: country.flags.png,
-      nativeName: country.name.nativeName,
-      subregion: country.subregion,
-      topLevelDomain: country.tld,
-      currencies: country.currencies,
-      languages: country.languages,
-      borders: country.borders || 'No borders',
     }
 
     modifiedCountries.push(modifiedCountry);
@@ -30,14 +24,25 @@ await fetch(API_URL_ALL_COUNTRIES)
 export const fetchCountryByName = async (countryName) => {
   const countryAsArr = await fetch(`${API_URL_COUNTRY_BY_NAME}${countryName}`)
   .then(async res => await res.json())
-  .then(country => {
-      // todo return only necessary properties of country object
-      return country
-  })
   .catch(err => console.log(err));
 
-  const country = countryAsArr[0]
-  return country;
+  const country = countryAsArr[0];
+  
+  const modifiedCountry = {
+    name: country.name.common,
+    nativeName: country.name.nativeName,
+    capital: country.capital,
+    population: country.population.toLocaleString(),
+    region: country.region,
+    subregion: country.subregion,
+    topLevelDomain: country.tld,
+    currencies: country.currencies,
+    languages: country.languages,
+    borders: country.borders || 'No borders',
+    flagLink: country.flags.svg,
+  }
+
+  return modifiedCountry;
 }
 
 export default modifiedCountries ;
