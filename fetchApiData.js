@@ -10,7 +10,7 @@ await fetch(API_URL_ALL_COUNTRIES)
 
     const modifiedCountry = {
       name: country.name.common,
-      capital: country.capital,
+      capital: country.capital ? country.capital[0] : 'No capital',
       population: country.population.toLocaleString(),
       region: country.region,
       flagLink: country.flags.png,
@@ -27,17 +27,17 @@ export const fetchCountryByName = async (countryName) => {
   .catch(err => console.log(err));
 
   const country = countryAsArr[0];
-  
+
   const modifiedCountry = {
     name: country.name.common,
-    nativeName: country.name.nativeName,
-    capital: country.capital,
+    nativeName: country.name.nativeName.eng.official,
+    capital: country.capital ? country.capital[0] : 'No capital',
     population: country.population.toLocaleString(),
     region: country.region,
     subregion: country.subregion,
-    topLevelDomain: country.tld,
-    currencies: country.currencies,
-    languages: country.languages,
+    topLevelDomain: country.tld[0],
+    currencies: Object.values(country.currencies).map(currency => currency.name),
+    languages: Object.values(country.languages),
     borders: country.borders || 'No borders',
     flagLink: country.flags.svg,
   }
