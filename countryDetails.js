@@ -11,9 +11,9 @@ export default async function renderCountryDetails(countryName) {
         <img src="${country.flagLink}" alt="${country.name} flag">
       </div>
       <div class="country-details-info">
-        <header class="country-name">
+        <div class="country-name-details">
           <h1>${country.name}</h1>
-        </header>
+        </div>
         <div class="country-details">
           <div class="country-details-left">
             <p><strong>Native Name:</strong> ${country.nativeName}</p>
@@ -21,11 +21,12 @@ export default async function renderCountryDetails(countryName) {
             <p><strong>Region:</strong> ${country.region}</p>
             <p><strong>Sub Region:</strong> ${country.subregion}</p>
             <p><strong>Capital:</strong> ${country.capital}</p>
-        </div>
-        <div class="country-details-right">
-          <p><strong>Top Level Domain:</strong> ${country.topLevelDomain}</p>
-          <p><strong>Currencies:</strong> ${country.currencies}</p>
-          <p><strong>Languages:</strong> ${country.languages}</p>
+          </div>
+          <div class="country-details-right">
+            <p><strong>Top Level Domain:</strong> ${country.topLevelDomain}</p>
+            <p><strong>Currencies:</strong> ${country.currencies}</p>
+            <p><strong>Languages:</strong> ${country.languages}</p>
+          </div>
         </div>
         <div class="country-borders">
           <p><strong>Border Countries:</strong> ${country.borders}</p>
