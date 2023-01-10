@@ -10,6 +10,9 @@ const darkMode = () => {
   selectRegionEl.classList.toggle('dark-mode');
   moonIcon.classList.toggle('svg-white');
 
+  const backBtn = document.querySelector('.back-a');
+  if(backBtn) backBtn.classList.toggle('dark-mode');
+
   const countriesContainers = document.querySelectorAll('.country-container');
   countriesContainers.forEach((countryContainer) => {
     countryContainer.classList.toggle('dark-mode');
