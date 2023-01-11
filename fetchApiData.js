@@ -14,6 +14,7 @@ await fetch(API_URL_ALL_COUNTRIES)
       population: country.population.toLocaleString(),
       region: country.region,
       flagLink: country.flags.png,
+      borderCode: country.cca3,
     }
 
     modifiedCountries.push(modifiedCountry);
@@ -41,8 +42,7 @@ export const fetchCountryByName = async (countryName) => {
     borders: country.borders || 'No borders',
     flagLink: country.flags.svg,
   }
-  console.log(modifiedCountry)
   return modifiedCountry;
 }
 
-export default modifiedCountries ;
+export default modifiedCountries;

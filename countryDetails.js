@@ -1,4 +1,5 @@
 import { fetchCountryByName } from "./fetchApiData.js";
+import countries from "./fetchApiData.js";
 
 export default async function renderCountryDetails(countryName) {
   const country = await fetchCountryByName(countryName);
@@ -30,8 +31,23 @@ export default async function renderCountryDetails(countryName) {
           </div>
         </div>
         <div class="country-borders">
-          <p><strong>Border Countries:</strong> ${country.borders}</p>
+          <div><p><strong>Border Countries:</strong></p></div>
+          <div class="country-borders-codes">
+            ${ typeof country.borders === "object"
+            ?
+            country.borders.map(borderCode => 
+              `<a href="/?country=${getCountryNameFromBorderCode(borderCode)}" class="border-a dark-mode">
+                ${borderCode}
+              </a>`).join('')
+            :
+            country.borders }
+          </div>
         </div>
       </div>
     </div>`;
+}
+
+function getCountryNameFromBorderCode(borderCode) {;
+  const country = countries.find(country => country.borderCode === borderCode);
+  return country.name;
 }

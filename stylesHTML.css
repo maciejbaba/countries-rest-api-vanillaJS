@@ -1,3 +1,7 @@
+:root {
+  --button-background-color-white-mode: rgb(222, 213, 213);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,7 +28,7 @@ header h1 {
 
 .dark-mode-button {
   display: flex;
-  background-color: rgb(228, 220, 220);
+  background-color: var(--button-background-color-white-mode);
   justify-content: center;
   align-items: center;
   gap: 0.25rem;

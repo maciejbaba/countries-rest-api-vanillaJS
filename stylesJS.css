@@ -42,6 +42,7 @@ a img {
 
 .country-details-container img {
   height: 10rem;
+  max-width: 12.5rem;
 }
 
 .country-details-info {
@@ -75,10 +76,35 @@ a img {
   font-weight: 600;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: rgb(228, 220, 220);
+  background-color: var(--button-background-color-white-mode);
   text-decoration: none;
 }
 
 .back-a:hover {
+  background-color: rgb(0, 0, 0, 0.10);
+}
+
+.country-borders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.country-borders-codes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.border-a {
+  display: fit-content;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--button-background-color-white-mode);
+}
+
+.border-a:hover {
   background-color: rgb(0, 0, 0, 0.10);
 }

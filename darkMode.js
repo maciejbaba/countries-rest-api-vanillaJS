@@ -13,6 +13,11 @@ const darkMode = () => {
   const backBtn = document.querySelector('.back-a');
   if(backBtn) backBtn.classList.toggle('dark-mode');
 
+  const borderBtns = document.querySelectorAll('.border-a');
+  if(borderBtns) borderBtns.forEach((borderBtn) => {
+    borderBtn.classList.toggle('dark-mode');
+  })
+
   const countriesContainers = document.querySelectorAll('.country-container');
   countriesContainers.forEach((countryContainer) => {
     countryContainer.classList.toggle('dark-mode');
