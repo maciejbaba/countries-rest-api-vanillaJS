@@ -31,7 +31,7 @@ export const fetchCountryByName = async (countryName) => {
 
   const modifiedCountry = {
     name: country.name.common,
-    nativeName: Object.values(country.name.nativeName).map(name => name.common),
+    nativeName: Object.values(country.name.nativeName)[0].official,
     capital: country.capital ? country.capital[0] : 'No capital',
     population: country.population.toLocaleString(),
     region: country.region,

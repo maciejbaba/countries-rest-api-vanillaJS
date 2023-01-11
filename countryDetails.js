@@ -27,7 +27,7 @@ export default async function renderCountryDetails(countryName) {
           <div class="country-details-right">
             <p><strong>Top Level Domain:</strong> ${country.topLevelDomain}</p>
             <p><strong>Currencies:</strong> ${country.currencies}</p>
-            <p><strong>Languages:</strong> ${country.languages}</p>
+            <div class="languages-div"><strong>Languages:</strong> ${country.languages.map(lang => `<p>${lang}</p>`).join('')}</div>
           </div>
         </div>
         <div class="country-borders">
