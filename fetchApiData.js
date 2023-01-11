@@ -30,7 +30,7 @@ export const fetchCountryByName = async (countryName) => {
 
   const modifiedCountry = {
     name: country.name.common,
-    nativeName: country.name.nativeName.eng.official,
+    nativeName: Object.values(country.name.nativeName).map(name => name.common),
     capital: country.capital ? country.capital[0] : 'No capital',
     population: country.population.toLocaleString(),
     region: country.region,
@@ -41,7 +41,7 @@ export const fetchCountryByName = async (countryName) => {
     borders: country.borders || 'No borders',
     flagLink: country.flags.svg,
   }
-
+  console.log(modifiedCountry)
   return modifiedCountry;
 }
 
