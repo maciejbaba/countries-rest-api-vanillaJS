@@ -36,7 +36,7 @@ export default async function renderCountryDetails(countryName) {
             ${ typeof country.borders === "object"
             ?
             country.borders.map(borderCode => 
-              `<a href="/?country=${getCountryNameFromBorderCode(borderCode)}" class="border-a dark-mode">
+              `<a href="./?country=${getCountryNameFromBorderCode(borderCode)}" class="border-a dark-mode">
                 ${borderCode}
               </a>`).join('')
             :
