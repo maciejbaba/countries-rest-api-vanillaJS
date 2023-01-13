@@ -8,7 +8,7 @@ export default async function renderCountryDetails(countryName) {
 
   navEl.innerHTML = `
     <div class="country-details-container">
-      <div class="country-flag-back-button">
+      <div class="country-flag-back-button-container">
         <a href="./" class="back-a dark-mode">Back</a>
         <img src="${country.flagLink}" alt="${country.name} flag">
       </div>
