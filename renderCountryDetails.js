@@ -9,7 +9,7 @@ export default async function renderCountryDetails(countryName) {
   navEl.innerHTML = `
     <div class="country-details-container">
       <div class="country-flag-back-button-container">
-        <a href="./" class="back-a dark-mode">Back</a>
+        <a href="./" class="back-a">Back</a>
         <img src="${country.flagLink}" alt="${country.name} flag">
       </div>
       <div class="country-details-info">
@@ -36,7 +36,7 @@ export default async function renderCountryDetails(countryName) {
             ${ typeof country.borders === "object"
             ?
             country.borders.map(borderCode => 
-              `<a href="././?country=${getCountryNameFromBorderCode(borderCode)}" class="border-a dark-mode">
+              `<a href="././?country=${getCountryNameFromBorderCode(borderCode)}" class="border-a">
                 ${borderCode}
               </a>`).join('')
             :
