@@ -17,7 +17,6 @@ const darkMode = () => {
 
 export default function applyDarkModeChanges() {
   const backBtn = document.querySelector(".back-a");
-  console.log(backBtn);
   const borderBtns = document.querySelectorAll(".border-a");
   const countriesContainers = document.querySelectorAll(".country-container");
 
