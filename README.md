@@ -4,7 +4,7 @@ Demo -> https://maciek367.github.io/countries-rest-api-vanillaJS/
 
 In this project I practiced HTML, CSS, VanillaJS and handling data from REST API.
 
-Second version of this project recreated in different technologies -> https://countries-rest-api-react-ts.vercel.app/
+Second version of this project recreated in different technologies -> https://github.com/maciek367/countries-rest-api-react-ts
 
 ## Stack
 
