@@ -1,8 +1,16 @@
-# countries site project using VanillaJS, REST API
+# Countries site project using VanillaJS, REST API
 
-In this project I will practice HTML, CSS, VanillaJS and learn using REST API.
-After finishing this project I will rewrite it in TS and React in order to see the difference in building projects with and without frameworks and type safety
+Demo -> https://maciek367.github.io/countries-rest-api-vanillaJS/
 
-I wish you a good day :)
+In this project I practiced HTML, CSS, VanillaJS and handling data from REST API.
 
-link: https://maciek367.github.io/countries-rest-api-vanillaJS/
+Second version of this project recreated in different technologies -> https://countries-rest-api-react-ts.vercel.app/
+
+## Stack
+
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>Public REST API</li>
+</ul>
