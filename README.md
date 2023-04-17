@@ -1,10 +1,10 @@
 # Countries site project using VanillaJS, REST API
 
-Demo -> https://maciek367.github.io/countries-rest-api-vanillaJS/
+Demo -> https://maciejbaba.github.io/countries-rest-api-vanillaJS/
 
 In this project I practiced HTML, CSS, VanillaJS and handling data from REST API.
 
-Second version of this project recreated in different technologies -> https://github.com/maciek367/countries-rest-api-react-ts
+Second version of this project recreated in different technologies -> https://github.com/maciejbaba/countries-rest-api-react-ts
 
 ## Stack
 
