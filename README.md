@@ -2,7 +2,7 @@
 
 Demo -> https://maciejbaba.github.io/countries-rest-api-vanillaJS/
 
-In this project I practiced HTML, CSS, VanillaJS and handling data from REST API.
+This project is built with HTML, CSS, VanillaJS. It fetches data from REST API.
 
 Second version of this project recreated in different technologies -> https://github.com/maciejbaba/countries-rest-api-react-ts
 
